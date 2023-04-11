@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.Service
+@{
+    ViewData["Title"] = "AddService";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddService", "Service", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Hizmet Ekleme Sayfası</h4>
+                <div class="forms-sample">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Hizmet Adı</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Şirket Adı" name="Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Fotoğraf </label>
+                        <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Tarih" name="ImageURL">
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Gönder</button>
+                    <a href="/Service/Index" class="btn btn-dark">İptal</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
